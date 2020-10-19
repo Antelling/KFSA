@@ -1,0 +1,183 @@
+{
+	"students": [
+		{
+			"name": "Anthony Dellinger",
+			"courses": [["CSC135", 1], ["CSC136", 1], ["CSC123", 1],
+				["CSC223", 1], ["CSC251", 1], ["CSC252", 1], ["CSC261", 1],
+				["CSC237", 1], ["CSC336", 1]],
+			"checksheets": ["BS Comp Sci"]
+		},
+		{
+			"name": "Noob McPherson",
+			"courses": [["CSC80", 1], ["CSC135", 1]],
+			"checksheets": ["BS Comp Sci"]
+		},
+		{
+			"name": "Joe Roe",
+			"courses": [["CSC135", 1], ["CSC136", 1], ["CSC123", 1], ["CSC252", 1], ["CSC261", 1], ["CSC337", 1]],
+			"checksheets": ["BS IT"]
+		},
+		{
+			"name": "Zoop DeScwe",
+			"courses": [["CSC135", 1], ["CSC136", 1], ["CSC123", 1],
+				["CSC223", 1], ["CSC251", 1], ["CSC252", 1], ["CSC261", 1],
+				["CSC237", 1], ["CSC336", 1], ["CSC337", 1], ["CSC350", 1], ["CSC360", 1]],
+			"checksheets": ["BS IT"]
+		}
+	],
+	"courses": [
+		{
+			"coursenum": "CSC80",
+			"name": "How to check your email without getting viruses",
+			"credit": 3,
+			"prerequisites": [],
+			"attributes": []
+		},
+		{
+			"coursenum": "CSC135",
+			"name": "Introduction to programming",
+			"credit": 3,
+			"prerequisites": [],
+			"attributes": ["csc", "100"]
+		},
+		{
+			"coursenum": "CSC136",
+			"name": "Second introduction",
+			"credit": 3,
+			"prerequisites": ["CSC135"],
+			"attributes": ["csc", "100"],
+			"soft sequence": ["CSC136"]
+		},
+		{
+			"coursenum": "CSC123",
+			"name": "Scientific programming but really its just making graphs with python",
+			"credit": 3,
+			"prerequisites": [],
+			"attributes": ["csc", "100"]
+		},
+		{
+			"coursenum": "CSC223",
+			"name": "Unix",
+			"credit": 3,
+			"prerequisites": ["CSC136"],
+			"attributes": ["csc", "200"]
+		},
+		{
+			"coursenum": "CSC251",
+			"name": "Assembly",
+			"credit": 3,
+			"prerequisites": ["CSC136"],
+			"attributes": ["csc", "200"]
+		},
+		{
+			"coursenum": "CSC252",
+			"name": "Datastructures",
+			"credit": 3,
+			"prerequisites": ["CSC136"],
+			"attributes": ["csc", "200"]
+		},
+		{
+			"coursenum": "CSC261",
+			"name": "Operating Systems",
+			"credit": 3,
+			"prerequisites": ["Assembly"],
+			"attributes": ["csc", "200"]
+		},
+		{
+			"coursenum": "CSC237",
+			"name": "Programming Languages",
+			"credit": 3,
+			"prerequisites": ["Assembly"],
+			"attributes": ["csc", "200"]
+		},
+		{
+			"coursenum": "CSC336",
+			"name": "Senior Sequence",
+			"credit": 3,
+			"prerequisites": ["CSC251"],
+			"attributes": ["csc", "300"]
+		},
+		{
+			"coursenum": "CSC337",
+			"name": "Senior Sequence II",
+			"credit": 3,
+			"prerequisites": ["CSC336"],
+			"attributes": ["csc", "300"],
+			"hard sequence": ["CSC336"]
+		},
+		{
+			"coursenum": "CSC350",
+			"name": "Senior Seminar",
+			"credit": 3,
+			"prerequisites": ["CSC237", "CSC252"],
+			"attributes": ["csc", "300"],
+			"hard sequence": ["CSC336"]
+		},
+		{
+			"coursenum": "CSC360",
+			"name": "Programming Languages II",
+			"credit": 3,
+			"prerequisites": ["CSC337"],
+			"attributes": ["csc", "300"],
+			"hard sequence": ["CSC336"]
+		}
+	],
+	"checksheets": [
+		{
+			"name": "BS Comp Sci",
+			"requirements": [
+				{
+					"name": "Major Required Courses",
+					"type": "required list",
+					"list": ["CSC223", "CSC251", "CSC261", "CSC237", "CSC337"],
+					"jealousy": 1
+				},
+				{
+					"name": "Major Electives",
+					"type": "credit demand",
+					"demand": 12,
+					"attribute criteria": [["csc"], ["200", "300", "400"]],
+					"jealousy": 1
+				},
+				{
+					"name": "Free Electives",
+					"type": "credit demand",
+					"demand": 18,
+					"attribute criteria": []
+				}
+			]
+		},
+		{
+			"name": "BS IT",
+			"requirements": [
+				{
+					"name": "Major Required Courses",
+					"type": "required list",
+					"list": ["CSC223", "CSC251", "CSC261", "CSC237", "CSC337"],
+					"jealousy": 1
+				},
+				{
+					"name": "200 Electives",
+					"type": "credit demand",
+					"demand": 12,
+					"attribute criteria": [["csc"], ["200", "300", "400"]],
+					"jealousy": 1
+				},
+				{
+					"name": "300 Electives",
+					"type": "credit demand",
+					"demand": 12,
+					"attribute criteria": [["csc"], ["300", "400"]],
+					"jealousy": 1
+				},
+				{
+					"name": "Free Electives",
+					"type": "credit demand",
+					"demand": 18,
+					"attribute criteria": [],
+					"jealousy": 1
+				}
+			]
+		}
+	]
+}
